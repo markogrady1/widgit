@@ -1,0 +1,26 @@
+{
+  "name": "markogrady1/widgit",
+  "description": "A widget to display your GitHub repositories within your website.",
+  "keywords": ["Github widget", "php"],
+  "type": "library",
+  "homepage": "https://github.com/markogrady1/widgit",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mark O Grady",
+      "homepage": "https://github.com/markogrady1"
+    }
+  ],
+  "require": {
+    "php": "^5.3.3 || ^7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.1.0@stable",
+    "raveren/kint": "^1.0"
+  },
+  "autoload":{
+    "psr-4": {
+      "Widgit\\Lib\\": "src/"
+    }
+  }
+}
