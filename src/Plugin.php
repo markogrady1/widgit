@@ -20,13 +20,17 @@ class Plugin extends Curl{
         $i = 0;
         if($isArray) {
             if($val) {
+                $keys = array("name", "full_name", "language", "fork", "html_url", "avatar_url");
+
                 foreach($val as $item) {
-                    $this->extracted[$i]["name"] = $item['name'];
-                    $this->extracted[$i]["fullname"] = $item['full_name'];
-                    $this->extracted[$i]["language"] = $item['language'];
-                    $this->extracted[$i]["fork"] = $item['fork'];
-                    $this->extracted[$i++]["html_url"] = $item['html_url'];
+                    foreach($keys as $option) {
+                        $this->extracted[$i][$option] = $option != "avatar_url"
+                            ? $this->extracted[$i][$option] = $item[$option]
+                            : $this->extracted[$i][$option] = $item["owner"][$option];
+                    }
+                    $i++;
                 }
+
 
             }
             $this->buildWidgetString();

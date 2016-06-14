@@ -1,6 +1,7 @@
 {
   "name": "markogrady1/widgit",
   "description": "A widget to display your GitHub repositories within your website.",
+  "version": "0.0.1",
   "keywords": ["Github widget", "php"],
   "type": "library",
   "homepage": "https://github.com/markogrady1/widgit",
@@ -12,7 +13,8 @@
     }
   ],
   "require": {
-    "php": "^5.3.3 || ^7.0"
+    "php": "^5.3.3 || ^7.0",
+    "markogrady1/widgit" : "*"
   },
   "require-dev": {
     "phpunit/phpunit": "~4.1.0@stable",
