@@ -9,7 +9,8 @@
 ```php
 <?php
   use Widgit\Lib\Plugin;
-  $widget = new Plugin("markogrady1", 15);
+  //simply provide your username and the amount of repositories your wish to display
+  $widget = new Plugin("markogrady1", 10);
   echo $widget->getData(true);
 ?>
 ```
